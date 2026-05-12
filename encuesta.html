@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta - Pastas Stefanini</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div class="ba">
+        <h1>Pastas Stefanini</h1>
+        <nav>
+            <a href="index.html">Volver al Inicio</a>
+        </nav>
+    </div>
+
+    <div class="titulo-pedido">
+        Encuesta de Satisfaccion
+    </div>
+
+    <div class="formulario-1">
+
+        <h3>Contanos tu experiencia</h3>
+
+        <p>
+            <div class="texto-campo">Nombre:</div>
+            <input type="text" id="nombre" placeholder="Tu nombre">
+        </p>
+
+        <p>
+            <div class="texto-campo">Como nos conociste:</div>
+            <select id="conociste">
+                <option value="amigo">Por un amigo o familiar</option>
+                <option value="redes">Por redes sociales</option>
+                <option value="calle">Pasando por el local</option>
+                <option value="internet">Buscando en internet</option>
+            </select>
+        </p>
+
+        <p>
+            <div class="texto-campo">Tu pasta favorita:</div>
+            <select id="pasta">
+                <option value="tallarines">Tallarines</option>
+                <option value="fettuccine">Fettuccine</option>
+                <option value="ravioles">Ravioles</option>
+                <option value="noquis">Noquis</option>
+                <option value="lasana">Lasana</option>
+            </select>
+        </p>
+
+        <p>
+            <div class="texto-campo">Como calificarias el servicio:</div>
+            <select id="calificacion">
+                <option value="excelente">Excelente</option>
+                <option value="bueno">Bueno</option>
+                <option value="regular">Regular</option>
+                <option value="malo">Malo</option>
+            </select>
+        </p>
+
+        <p>
+            Volveria a pedir:
+            <input type="radio" name="volveria" id="si" value="si"> Si
+            <input type="radio" name="volveria" id="no" value="no"> No
+        </p>
+
+        <button class="btn-calcular" onclick="enviarEncuesta()">
+            Enviar Encuesta
+        </button>
+
+        <button class="btn-limpiar" onclick="limpiarEncuesta()">
+            Limpiar
+        </button>
+
+        <div class="resultado-pedido" id="resultado">
+            <h4>Gracias por tu respuesta</h4>
+            <p><strong>Nombre:</strong> <p class="res-nombre" id="res-nombre"></p></p>
+            <p><strong>Como nos conociste:</strong> <p class="res-dato" id="res-conociste"></p></p>
+            <p><strong>Pasta favorita:</strong> <p class="res-dato" id="res-pasta"></p></p>
+            <p><strong>Calificacion del servicio:</strong> <p class="res-dato" id="res-calificacion"></p></p>
+            <p><strong>Volveria a pedir:</strong> <p class="res-dato" id="res-volveria"></p></p>
+            <br>
+            <p>Tu opinion es muy importante para nosotros. Gracias por elegirnos.</p>
+        </div>
+
+    </div>
+
+    <div class="contacto-mini">
+        <h2>Contacto</h2>
+        <p>Direccion: Av. Italia 1452, Buenos Aires, Argentina</p>
+        <p>Telefono / WhatsApp: +54 11 4567-8901</p>
+        <p>Email: stefanini.pastas@gmail.com</p>
+    </div>
+
+    <script src="encuesta.js"></script>
+
+</body>
+</html>

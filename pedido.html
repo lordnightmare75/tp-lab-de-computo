@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacer Pedido - Pastas Stefanini</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div class="ba">
+        <h1>Pastas Stefanini</h1>
+        <nav>
+            <a href="index.html">Volver al Inicio</a>
+            <a href="encuesta.html">Encuesta</a>
+        </nav>
+    </div>
+
+    <div class="titulo-pedido">
+        Formulario de Pedido
+    </div>
+
+    <div class="formulario-1">
+
+        <h3>Tus Datos Personales</h3>
+
+        <p>
+            <div class="texto-campo">Nombre:</div>
+            <input type="text" id="nombre" placeholder="Ej: Juan">
+        </p>
+
+        <p>
+            <div class="texto-campo">Apellido:</div>
+            <input type="text" id="apellido" placeholder="Ej: Garcia">
+        </p>
+
+        <p>
+            <div class="texto-campo">Telefono:</div>
+            <input type="number" id="telefono" placeholder="Ej: 1123456789">
+        </p>
+
+        <p>
+            <div class="texto-campo">Direccion:</div>
+            <input type="text" id="direccion" placeholder="Calle y numero">
+        </p>
+
+        <p>
+            <div class="texto-campo">Ciudad:</div>
+            <input type="text" id="ciudad" placeholder="Ej: Buenos Aires">
+        </p>
+
+        <p>
+            <div class="texto-campo">Tipo de entrega:</div>
+            <select id="envio">
+                <option value="domicilio">Envio a domicilio (+$1.500)</option>
+                <option value="local">Retiro en el local (gratis)</option>
+            </select>
+        </p>
+
+        <h3>Elegi tus Pastas</h3>
+
+        <p>Podes elegir hasta 3 tipos de pasta. Pones 0 kg en las que no queres.</p>
+
+        <div class="fila-pasta">
+            <div class="texto-campo">Pasta 1:</div>
+            <select id="pasta1">
+                <option value="tallarines">Tallarines - $2.500/kg</option>
+                <option value="fettuccine">Fettuccine - $2.800/kg</option>
+                <option value="ravioles">Ravioles - $3.500/kg</option>
+                <option value="noquis">Noquis - $2.200/kg</option>
+                <option value="lasagna">Lasana - $3.800/kg</option>
+            </select>
+            <input type="number" id="cantidad1" value="0" min="0" max="10" step="0.5"> kg
+        </div>
+
+        <div class="fila-pasta">
+            <div class="texto-campo">Pasta 2:</div>
+            <select id="pasta2">
+                <option value="tallarines">Tallarines - $2.500/kg</option>
+                <option value="fettuccine">Fettuccine - $2.800/kg</option>
+                <option value="ravioles">Ravioles - $3.500/kg</option>
+                <option value="noquis">Noquis - $2.200/kg</option>
+                <option value="lasagna">Lasana - $3.800/kg</option>
+            </select>
+            <input type="number" id="cantidad2" value="0" min="0" max="10" step="0.5"> kg
+        </div>
+
+        <div class="fila-pasta">
+            <div class="texto-campo">Pasta 3:</div>
+            <select id="pasta3">
+                <option value="tallarines">Tallarines - $2.500/kg</option>
+                <option value="fettuccine">Fettuccine - $2.800/kg</option>
+                <option value="ravioles">Ravioles - $3.500/kg</option>
+                <option value="noquis">Noquis - $2.200/kg</option>
+                <option value="lasagna">Lasana - $3.800/kg</option>
+            </select>
+            <input type="number" id="cantidad3" value="0" min="0" max="10" step="0.5"> kg
+        </div>
+
+        <button class="btn-calcular" onclick="calcularPedido()">
+            Calcular mi Pedido
+        </button>
+
+        <button class="btn-limpiar" onclick="limpiarFormulario()">
+            Limpiar Formulario
+        </button>
+
+        <div class="resultado-pedido" id="resultado">
+            <h4>Resumen de tu Pedido</h4>
+
+            <p><strong>Cliente:</strong> <p class="res-nombre" id="res-nombre"></p></p>
+            <p><strong>Direccion:</strong> <p class="res-dato" id="res-direccion"></p></p>
+            <p><strong>Telefono:</strong> <p class="res-dato" id="res-telefono"></p></p>
+
+            <br>
+
+            <p><strong>Detalle del pedido:</strong></p>
+            <p id="res-detalle"></p>
+
+            <br>
+
+            <p><strong>Entrega:</strong> <p class="res-dato" id="res-envio"></p></p>
+            <p class="precio-total" id="res-total"></p>
+
+            <br>
+            <p>Nos comunicaremos al telefono indicado para confirmar el pedido. Gracias por elegirnos.</p>
+        </div>
+
+    </div>
+
+    <script src="pedido.js"></script>
+
+</body>
+</html>
